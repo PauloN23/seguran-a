@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criador de Senhas Seguras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <header class="cabecalho">
+            <img src="lock.svg" alt="ícone de cadeado">
+            <h1 class="titulo">Criador de Senhas</h1>
+            <p class="subtitulo">Monte senhas fortes de forma simples e rápida</p>
+        </header>
+
+        <section class="senha-gerada">
+            <label for="campoSenha">Sua senha:</label>
+            <input type="text" id="campoSenha" readonly>
+        </section>
+
+        <section class="configuracoes">
+            <h2 class="config-titulo">Ajuste sua senha</h2>
+
+            <!-- Quantidade de caracteres -->
+            <div class="config-item">
+                <h3>Tamanho</h3>
+                <div class="ajuste-caracteres">
+                    <button class="btn-ajuste" id="diminuir">-</button>
+                    <span id="tamanhoSenha">12</span>
+                    <button class="btn-ajuste" id="aumentar">+</button>
+                </div>
+            </div>
+
+            <!-- Tipos de caracteres -->
+            <div class="config-item">
+                <h3>Incluir:</h3>
+                <label><input type="checkbox" id="chkMaiusculas" checked> Letras maiúsculas</label>
+                <label><input type="checkbox" id="chkMinusculas"> Letras minúsculas</label>
+                <label><input type="checkbox" id="chkNumeros"> Números</label>
+                <label><input type="checkbox" id="chkSimbolos"> Símbolos</label>
+            </div>
+
+            <!-- Força da senha -->
+            <div class="config-item">
+                <h3>Nível de segurança</h3>
+                <div class="barra-forca">
+                    <span class="nivel fraco"></span>
+                </div>
+                <div class="legenda-forca">
+                    <small>Fraca</small>
+                    <small>Média</small>
+                    <small>Forte</small>
+                </div>
+                <p id="entropia"></p>
+            </div>
+        </section>
+
+        <footer class="rodape">
+            <button id="btnGerar">Gerar Senha</button>
+            <button id="btnCopiar">Copiar</button>
+        </footer>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
